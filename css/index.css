@@ -1,0 +1,273 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/* Custom styles specific to this project */
+body {
+    font-family: 'Kanit', sans-serif;
+    background-color: #f8f9fa;
+    color: #343a40;
+}
+
+/* Hero Section */
+#hero {
+    position: relative;
+    height: 100vh; /* Adjust height as needed */
+    overflow: hidden;
+}
+
+#hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust overlay color and opacity */
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #ffffff; /* Adjust text color */
+    z-index: 1; /* Ensure content is above the video */
+}
+
+.hero-content h1 {
+    font-size: 3.5rem; /* Adjust font size */
+}
+
+.hero-content p {
+    font-size: 1.5rem; /* Adjust font size */
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem; /* Adjust font size for smaller screens */
+    }
+
+    .hero-content p {
+        font-size: 1.25rem; /* Adjust font size for smaller screens */
+    }
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: whitesmoke !important; /* Override Bootstrap default */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-toggler{
+    border: none;
+}
+
+
+.nav-link{
+    color: black  !important;
+    position: relative;
+    padding-bottom: 10px;
+}
+/*#343a40*/
+
+.navbar .nav-link::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 3px;
+    background-color: transparent;
+    transition: background-color 3s ease;
+}
+
+.navbar .nav-link.active::after,
+        .navbar .nav-link:hover::after {
+            background-color: #007bff; /* Change this color to match your site's theme */
+        }
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+/* About Section styles */
+#about {
+    background-color: #ffffff;
+    padding: 60px 0;
+}
+
+/* Featured Projects Section styles */
+#projects {
+    background-color: #f8f9fa;
+    padding: 60px 0;
+}
+
+.card {
+    border: none;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* Testimonials Section styles */
+#testimonials {
+    background-color: #ffffff;
+    padding: 60px 0;
+}
+
+/* Footer styles */
+footer {
+    background-color: #343a40;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer a {
+    color: #ffffff;
+}
+
+footer a:hover {
+    text-decoration: none;
+}
+
+
+#dpes{
+    width: 100%;
+    height: 2.6rem;
+}
+
+.card-img-top {
+    height: 300px; /* Adjust this value as needed */
+    object-fit: cover; /* Ensures the image covers the entire box without stretching */
+  }
+
+
+/* CSS for Animation */
+.partner-logo {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1.2s ease, transform 1.2s ease;
+}
+
+.partner-logo.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* CSS for adding shadows to cards */
+.card {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0 ease; 
+}
+
+.card:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); 
+}
+
+
+#club-logo{
+    width: 100%;
+    height: 3.5rem;
+}
+
+/* Customize the dropdown menu */
+.navbar-nav .dropdown-menu {
+    background-color: #ffffff; /* Change this to match your theme */
+    border: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Customize the dropdown items */
+.navbar-nav .dropdown-item {
+    color: #333333; /* Change this to match your theme */
+}
+
+.navbar-nav .dropdown-item:hover {
+    background-color: #f8f9fa; /* Change this to match your theme */
+    color: #007bff; /* Change this to match your theme */}
+
+/* Custom CSS for Dropdown Hover with Smooth Transition */
+.navbar-nav .nav-item.dropdown .dropdown-menu {
+    display: none;
+    opacity: 0;
+    transition: opacity 5s ease, transform 5s ease;
+    transform: translateY(-10px); /* Start with dropdown slightly above */
+}
+
+.navbar-nav .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+    transform: translateY(0); /* Move dropdown to its normal position */
+    margin-top: 0; /* Remove the margin to align the dropdown properly */
+}
+
+.navbar-nav .nav-item .dropdown-toggle::after {
+    display: none; /* Remove the default caret icon if you don't want it */
+}
+
+
+/* Popup styles */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+
+}
+
+.popup-content {
+    position: relative;
+    margin: 15% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 500px;
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.popup-close:hover,
+.popup-close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+#breaking-word {
+    text-decoration: underline; /* Add underline */
+}
+
+#breaking-word:hover {
+    cursor: pointer; /* Optional: Add pointer cursor on hover */
+}

@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Kanit', sans-serif;
+    background-color: #f8f9fa;
+    color: #343a40;
+}
+
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.navbar-toggler-icon {
+    color: white;
+}
+
+footer {
+    background-color: #343a40;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer a {
+    color: #ffffff;
+}
+
+footer a:hover {
+    text-decoration: none;
+}
+
+#dpes {
+    width: 100%;
+    height: 2.6rem;
+}
+
+#club-logo {
+    width: 100%;
+    height: 3.5rem;
+}
+
+#drone-club {
+    margin-top: 80px; /* Adjust this value as needed */
+    margin-bottom: 40px; /* Adjust this value as needed */
+}
+
+#drone-club .section-title {
+    font-size: 2.5rem;
+    color: #343a40;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#drone-club .section-text {
+    font-size: 1.25rem;
+    color: #6c757d;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    #drone-club .section-title {
+        font-size: 2rem;
+    }
+    
+    #drone-club .section-text {
+        font-size: 1.1rem;
+    }
+
+    .col-md-6 {
+        margin-bottom: 20px;
+    }
+}
+
+.drone-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative; /* Ensure relative positioning for absolute shadow */
+    overflow: hidden; /* Hide overflowing shadows */
+}
+
+.drone-image img {
+    max-width: 100%; /* Ensure both images scale down to fit their container */
+    max-height: 100%; /* Ensure both images scale down to fit their container */
+    width: auto; /* Ensure both images take up full width of their container */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    margin: 0 auto;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition for transform and box-shadow */
+}
+
+.drone-image:hover img {
+    transform: scale(1.05); /* Scale up the image slightly on hover */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3); /* Add shadow on hover */
+}
+
+@media (min-width: 992px) {
+    .drone-image img {
+        max-width: 300px; /* Adjust max-width as per your design */
+        max-height: 200px; /* Adjust max-height as per your design */
+    }
+}

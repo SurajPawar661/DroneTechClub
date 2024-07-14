@@ -1,0 +1,49 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    padding-top: 70px; /* Adjust this value according to the height of your navbar */
+}
+
+#gallery .img-fluid {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures images maintain aspect ratio and cover entire space */
+    transition: transform 0.3s ease; /* Smooth scaling effect on hover */
+}
+
+#gallery .img-fluid:hover {
+    transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+#gallery .col-6 {
+    padding: 10px; /* Optional: Add padding around images */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle effect */
+    transition: box-shadow 0.3s ease; /* Smooth transition for box-shadow */
+}
+
+#gallery .col-6:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
+}
+
+/* Custom CSS for Dropdown Hover with Smooth Transition */
+.navbar-nav .nav-item.dropdown .dropdown-menu {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateY(-10px); /* Start with dropdown slightly above */
+}
+
+.navbar-nav .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+    transform: translateY(0); /* Move dropdown to its normal position */
+    margin-top: 0; /* Remove the margin to align the dropdown properly */
+}
+
+.navbar-nav .nav-item .dropdown-toggle::after {
+    display: none; /* Remove the default caret icon if you don't want it */
+}
+
